@@ -7,4 +7,5 @@ export { default as Header } from './MainHeader';
 export { default as PageContent } from './PageContent';
 export { default as PageHeader } from './PageHeader';
 export { default as CallToAction } from './CallToAction';
+export { default as Slider } from './Slider';
 

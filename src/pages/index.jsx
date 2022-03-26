@@ -1,17 +1,19 @@
-import { About, Advantages, Feedback, Footer, Header, CallToAction, Services, BannerSection } from '@/blocks';
+import { About, Advantages, Feedback, Footer, Header, CallToAction, Slider, BannerSection } from '@/blocks';
 import { ContactForm, ContactFormSuccess } from '@/components';
 import { useModal } from '@/context';
-import { main, services, header, callToAction } from '@/data';
+import { main, services, header, callToAction, slider } from '@/data';
 import { Modal } from '@/ui';
 
 export const getStaticProps = async () => {
     return {
-        props: { header, callToAction }
+        props: { header, callToAction, slider }
     }
 }
 
 export default function Home({
     header,
+    callToAction,
+    slider
     // advantages,
     // services,
     // feedback,
@@ -24,6 +26,7 @@ export default function Home({
         <>
             <Header data={header} />
             <CallToAction data={callToAction}/>
+            <Slider data={slider}/>  
             {/* <Advantages data={advantages} />
             <BannerSection data={banner} />
 =           <Services data={services} />

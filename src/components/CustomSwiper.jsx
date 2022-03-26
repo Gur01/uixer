@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import SwiperCore, { Autoplay, Scrollbar, Navigation } from 'swiper';
+import SwiperCore, { Autoplay, Navigation, Scrollbar } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 import { Swiper } from 'swiper/react';
 
 SwiperCore.use([Scrollbar, Autoplay, Navigation]);
+
 
 const CustomSwiper = ({children, autoplay = false, spaceBetween = 0, slidesPerView = 1, ...props}) => {
     return (
@@ -16,10 +17,12 @@ const CustomSwiper = ({children, autoplay = false, spaceBetween = 0, slidesPerVi
                 loop={false}
                 speed={600}
                 autoplay={autoplay}
+                touchStartPreventDefault = {false}
                 {...props}
             >
                 {children}
             </StyledSwiper>
+            
     )
 }
 

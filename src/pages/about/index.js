@@ -1,4 +1,4 @@
-import { BannerSection, Footer, PageContent, PageHeader, Services } from '@/blocks';
+import { BannerSection, Footer, PageContent, PageHeader } from '@/blocks';
 import { ContactForm, ContactFormSuccess } from '@/components';
 import { useModal } from '@/context';
 import { about, services } from '@/data';
@@ -17,7 +17,6 @@ const About = ({header, content, services, banner}) => {
         <>  
             <PageHeader data={header}/>
             <PageContent data={content}/>
-            <Services data={services} noTitle/>
             <BannerSection data={banner} />
             <Footer />
             <Modal open={isOpenedModal}>
