@@ -1,0 +1,1 @@
+export const formatPrice = (sum) => `${sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} ₽`

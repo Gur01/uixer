@@ -10,4 +10,5 @@ export { default as Modal } from './Modal';
 export { default as Section } from './Section';
 export { default as Textarea } from './Textarea';
 export { default as Title } from './Title';
+export { default as Accordion } from './Accordion';
 

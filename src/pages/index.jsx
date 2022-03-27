@@ -29,6 +29,9 @@ export default function Home({
             <Slider data={slider}/>
             <Companies />
             <Calculator />
+            <CallToAction data={callToAction}/>
+            <Slider data={slider}/>
+            <Companies />
             {/* <Advantages data={advantages} />
             <BannerSection data={banner} />
 =           <Services data={services} />

@@ -1,5 +1,5 @@
 import { colors } from '@/constants';
-import { Container, Section, Title, Divider, Dollar, AddButton } from '@/ui';
+import { Container, Section, Title, Divider, Dollar, AddButton, Accordion } from '@/ui';
 import { AccordionPanel} from '@/components';
 import styled from 'styled-components';
 
@@ -131,7 +131,6 @@ const Calculator = ({ data }) => {
                         <AccordionPanel key={index} data={item}/>
                     )}
                 </Accordion>
-
             </Container>
 
             {/* <AdvantagesBox>
@@ -153,14 +152,6 @@ export default Calculator;
 
 const StyledDivider = styled(Divider)`
     align-items: center;
-`
-
-const Accordion = styled.ol`
-    counter-reset: item;
-    margin-left: 0;
-    padding-left: 0;
-    list-style-type: none;
-    margin-top: 60px;
 `
 
 const DollarBox = styled(Divider)`

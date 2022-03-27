@@ -92,7 +92,7 @@ const ContactForm = () => {
 
     return (
         <StyledForm>
-            <StyledCross onClick={closeModal}/>
+            {/* <StyledCross onClick={closeModal}/> */}
             <Title>Заказать звонок</Title>
             <SubTitle>Оставь заявку и мы перезвоним в течении 15 минут</SubTitle>
             <Input placeholder="Имя" name="name" errorMessage={error.name} onChange={onChange} />
@@ -151,9 +151,9 @@ const CheckboxBlock = styled.div`
     }
 `
 
-const StyledCross = styled(Cross)`
-    position: absolute;
-    right: 21px;
-    top: 21px;
-    cursor: pointer;
-`
+// const StyledCross = styled(Cross)`
+//     position: absolute;
+//     right: 21px;
+//     top: 21px;
+//     cursor: pointer;
+// `
