@@ -37,4 +37,7 @@ export const ArrowLeft = () => <svg width="14" height="26" viewBox="0 0 14 26" f
     <path d="M12 24L1 13L12 2" stroke="white" strokeWidth="2" strokeLinecap="square" strokeLinejoin="round" />
 </svg>
 
+export const ArrowUp = () => <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1H11V11" stroke="#FF5C00" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
 

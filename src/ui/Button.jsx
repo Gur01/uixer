@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '@/constants';
 
 const Button = ({ children, ...props }) => {
     return (
@@ -11,14 +12,14 @@ const Button = ({ children, ...props }) => {
 export default Button;
 
 const StyledButton = styled.button`
-    height: 56px;
-    padding: 16px 45px;
+    /* height: 58px; */
+    padding: 18px 46px;
     background-color: #FFD337;
-    color: #000;
-    border: none;
+    color: ${colors.black};
 	outline: none;
-    font-size: 16px;
+    font-size: 0.7rem;
     cursor: pointer;
-    white-space: nowrap
+    white-space: nowrap;
+    border: 1px solid ${colors.red}
 `;
 

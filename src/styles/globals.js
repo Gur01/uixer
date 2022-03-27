@@ -4,11 +4,11 @@ import { colors } from '@/constants'
 const GlobalStyle = createGlobalStyle`
     @font-face {
         font-family: 'Mont';
-        src: url('../../public/fonts/Mont-Regular.eot');
-        src: url('../../public/fonts/Mont-Regular.eot?#iefix') format('embedded-opentype'),
-            url('../../public/fonts/Mont-Regular.woff2') format('woff2'),
-            url('../../public/fonts/Mont-Regular.woff') format('woff'),
-            url('../../public/fonts/Mont-Regular.ttf') format('truetype');
+        src: url('../../fonts/Mont-Regular.eot');
+        src: url('../../fonts/Mont-Regular.eot?#iefix') format('embedded-opentype'),
+            url('../../fonts/Mont-Regular.woff2') format('woff2'),
+            url('../../fonts/Mont-Regular.woff') format('woff'),
+            url('../../fonts/Mont-Regular.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
         font-display: swap;
@@ -16,11 +16,11 @@ const GlobalStyle = createGlobalStyle`
 
     @font-face {
         font-family: 'Mont';
-        src: url('Mont-SemiBold.eot');
-        src: url('Mont-SemiBold.eot?#iefix') format('embedded-opentype'),
-            url('Mont-SemiBold.woff2') format('woff2'),
-            url('Mont-SemiBold.woff') format('woff'),
-            url('Mont-SemiBold.ttf') format('truetype');
+        src: url('../../fonts/Mont-SemiBold.eot');
+        src: url('../../fonts/Mont-SemiBold.eot?#iefix') format('embedded-opentype'),
+            url('../../fonts/Mont-SemiBold.woff2') format('woff2'),
+            url('../../fonts/Mont-SemiBold.woff') format('woff'),
+            url('../../fonts/Mont-SemiBold.ttf') format('truetype');
         font-weight: 700;
         font-style: normal;
         font-display: swap;
@@ -28,11 +28,11 @@ const GlobalStyle = createGlobalStyle`
 
     @font-face {
         font-family: 'Mont';
-        src: url('../../public/fonts/Mont-SemiBold.eot');
-        src: url('../../public/fonts/Mont-SemiBold.eot?#iefix') format('embedded-opentype'),
-            url('../../public/fonts/Mont-SemiBold.woff2') format('woff2'),
-            url('../../public/fonts/Mont-SemiBold.woff') format('woff'),
-            url('../../public/fonts/Mont-SemiBold.ttf') format('truetype');
+        src: url('../../fonts/Mont-SemiBold.eot');
+        src: url('../../fonts/Mont-SemiBold.eot?#iefix') format('embedded-opentype'),
+            url('../../fonts/Mont-SemiBold.woff2') format('woff2'),
+            url('../../fonts/Mont-SemiBold.woff') format('woff'),
+            url('../../fonts/Mont-SemiBold.ttf') format('truetype');
         font-weight: 600;
         font-style: normal;
         font-display: swap;
@@ -40,11 +40,11 @@ const GlobalStyle = createGlobalStyle`
 
     @font-face {
         font-family: 'DM Sans';
-        src: url('../../public/fonts/DMSans-Regular.eot');
-        src: url('../../public/fonts/DMSans-Regular.eot?#iefix') format('embedded-opentype'),
-            url('../../public/fonts/DMSans-Regular.woff2') format('woff2'),
-            url('../../public/fonts/DMSans-Regular.woff') format('woff'),
-            url('../../public/fonts/DMSans-Regular.ttf') format('truetype');
+        src: url('../../fonts/DMSans-Regular.eot');
+        src: url('../../fonts/DMSans-Regular.eot?#iefix') format('embedded-opentype'),
+            url('../../fonts/DMSans-Regular.woff2') format('woff2'),
+            url('../../fonts/DMSans-Regular.woff') format('woff'),
+            url('../../fonts/DMSans-Regular.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
         font-display: swap;
@@ -114,6 +114,7 @@ const GlobalStyle = createGlobalStyle`
         border-radius: 10px;
         border: 3px solid #ffffff;
     }
+
 `
 
 export default GlobalStyle;

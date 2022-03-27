@@ -1,5 +1,5 @@
 import { colors } from '@/constants';
-import { Check, Container, Section } from '@/ui';
+import { Check, Container, Section, ArrowUp } from '@/ui';
 import { CustomSwiper, SwiperNavigation } from '@/components';
 import styled from 'styled-components';
 import { SwiperSlide } from "swiper/react";
@@ -13,7 +13,6 @@ const Slider = ({ data }) => {
 
     const sliderContainer = useRef(null)
     const caseRef = useRef(null)
-    const testref = useRef(null)
 
     const onSlideChange = (props) => {
         setCurrentSlide(props.activeIndex)
@@ -22,7 +21,7 @@ const Slider = ({ data }) => {
     const showIcon = (item) => {
         return () => {
             console.log('show')
-            item.style.display = 'inline-block';
+            item.style.display = 'flex';
         }
     }
 
@@ -42,29 +41,29 @@ const Slider = ({ data }) => {
         image.style.top = `${event.pageY - top - window.scrollY - 61}px`;
     }
 
-    const test = () => {
-        console.log('hello')
-    }
-
     useEffect(() => {
         const container = sliderContainer.current;
         const image = caseRef.current;
 
-        const show = showIcon(image)
-        const hide = hideIcon(image)
+        const show = showIcon(image);
+        const hide = hideIcon(image);
 
         container.addEventListener('mouseover', show)
         container.addEventListener('mouseout', hide);
         container.addEventListener('mousemove', definePosition);
-        container.addEventListener('mousedown', test);
         
         return () => {
             container.removeEventListener('mouseover', show)
             container.removeEventListener('mouseout', hide)
             container.removeEventListener('mousemove', definePosition);
         }
-
     }, [])
+
+    const openCase = () => {
+        const image = caseRef.current;
+        image.classList.add("bounceOut")
+        console.log('hello', image)
+    }
 
     return (
         <Section>
@@ -90,7 +89,10 @@ const Slider = ({ data }) => {
                         )}
 
                     </CustomSwiper>
-                    <StyledCase ref={caseRef} src="./images/case.png" alt="" />
+                    <StyledCase ref={caseRef} className="animated">
+                            <span>Кейс</span>
+                            <ArrowUp />
+                    </StyledCase>
                 </SliderContainer>
                 <SwiperNavigation theme="white" className='slider' />
             </Container>
@@ -105,7 +107,7 @@ const SliderContainer = styled.div`
     cursor: none;
 `
 
-const StyledCase = styled.img`
+const StyledCase = styled.div`
     display: none;
     z-index: 1;
     width: 132px;
@@ -113,6 +115,15 @@ const StyledCase = styled.img`
     position: absolute;
     top: 0;
     pointer-events: none;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    border-radius: 50%;
+    background-color: ${colors.white};
+
+    span {
+        margin-right: 10px;
+    }
 
     /* @media screen and (min-width: 1024px) {
     } */

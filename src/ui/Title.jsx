@@ -1,26 +1,16 @@
 import styled from 'styled-components';
+import { colors } from '@/constants';
 
-const Title = ({ children, ...props }) => {
-    return (
-        <StyledTitle {...props}>
-            {children}
-        </StyledTitle>
-    )
-}
+const Title = styled.h3`
+    font-weight: 600;
+    font-size: 32px;
+    color: ${colors.lightBlack}
+    line-height: 120%;
+    
+    /* @media screen and (min-width: 540px) {
+        font-size: 40px;
+    } */
+`;
 
 export default Title;
-
-const StyledTitle = styled.h3`
-    font-weight: normal;
-    font-size: 32px;
-
-    span {
-        text-decoration: underline;
-        text-decoration-color: #FFD337;
-    }
-    
-    @media screen and (min-width: 540px) {
-        font-size: 40px;
-    }
-`;
 
