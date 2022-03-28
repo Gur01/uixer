@@ -1,4 +1,4 @@
-import { AddButton, Accordion, Title } from '@/ui';
+import { AddButton, Accordion, Title, AccordionItem, Button, Telegram, Input } from '@/ui';
 import { colors } from '@/constants';
 import { formatPrice } from '@/utils';
 import styled from 'styled-components';
@@ -46,111 +46,104 @@ const AccordionPanel = ({ data }) => {
     console.log(data);
     const [total, setTotal] = useState(0);
     const [isOpened, setIsOpened] = useState(false);
+    console.log(isOpened);
 
-    const openPanel = (sum) => {
+    const openPanel = () => {
         setIsOpened(true);
-        setTotal((state) => state + sum)
+        setTotal((state) => state + cost);
     }
 
     const closePanel = () => {
         setIsOpened(false);
-        setTotal(0)
+        setTotal(0);
     }
 
     return (
         <>
-            <StyledAccordionPanel>
-                <ServiceTitle>{title}</ServiceTitle>
-                <Cost>{formatPrice(cost)}</Cost>
-                <AddButton onOpen={()=> openPanel(cost)} onClose={()=>closePanel(cost)} isOpened={isOpened} />
-            </StyledAccordionPanel>
+            <AccordionItem
+                title={title}
+                cost={cost}
+                onOpen={openPanel}
+                onClose={closePanel}
+            />
             {isOpened && <StyledAccordion>
                 {items.map((item, index) => {
                     const { title, cost, description } = item;
 
                     return (
-                        <StyledAccordionPanel key={index}>
-                            <ServiceTitle>{title}</ServiceTitle>
-                            <Cost>{formatPrice(cost)}</Cost>
-                            <AddButton onOpen={()=> setTotal((state) => state + cost)} onClose={()=> setTotal((state) => state - cost)}/>
-
-                            {/* {description && <div>description</div>} */}
-                        </StyledAccordionPanel>
-
+                        <AccordionItem
+                            key={index}
+                            title={title}
+                            cost={cost}
+                            description={description}
+                            onOpen={() => setTotal((state) => state + cost)}
+                            onClose={() => setTotal((state) => state - cost)}
+                        />
                     )
                 })}
+                <Result>
+                    <ResultLeft>
+                        <TextBlock>
+                            <Title>Итого</Title>
+                            <ResultSubTitle>В целом, конечно, укрепление и развитие внутренней структуры выявляет срочную потребность</ResultSubTitle>
+                        </TextBlock>
+                        <FormBlock>
+                            <StyledInput type="text" placeholder="Номер телефона" outline />
+                            <Button><ButtonText>Заказать сайт</ButtonText><Telegram /></Button>
+                        </FormBlock>
+                    </ResultLeft>
+                    <ResultSum>{formatPrice(total)}</ResultSum>
+                </Result>
             </StyledAccordion>}
-            <Result>
-                <div>
-                    <Title>Итого</Title>
-                    <ResultSubTitle></ResultSubTitle>
-                </div>
-                <ResultSum>{formatPrice(total)}</ResultSum>
-            </Result>
         </>
     )
 }
 
 export default AccordionPanel
 
+const TextBlock = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+`
+
+const ButtonText = styled.span`
+    margin-right: 16px;
+`
+
+const ResultLeft = styled.div`
+    margin-right: 16px;
+    width: 50%;
+`
+
+const FormBlock = styled.form`
+    display: flex;
+    /* justify-content: space-between; */
+`
+
+const StyledInput = styled(Input)`
+    min-width: 250px;
+    margin-right: 20px;
+`
+
 const Result = styled.div`
     padding: 40px 0 65px;
     display: flex;
 	justify-content: space-between;
-    margin-left: 100px;
-`
-
-const ResultTitle = styled.div`
-    font-weight: 600;
+    border-top: 1px solid rgba(47, 47, 47, 0.4); //colors.lightBlack
 
 `
 
 const ResultSubTitle = styled.div`
-    
+    font-weight: 600;
+    font-size: 0.7rem;
+    opacity: 0.6;
+    margin-top: 16px;
+    margin-bottom: 38px;
 `
 
 const ResultSum = styled.div`
-    
-`
-
-
-const Cost = styled.div`
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: ${colors.lightBlack};
-`
-
-const StyledAccordionPanel = styled.li`
-    display: flex;
-    padding: 33px 0;
-    border-top: 1px solid rgba(47, 47, 47, 0.4); //colors.lightBlack
-    justify-content: space-between;
-	align-items: center;
-
-    &:before {
-        display: inline-block;
-        content: "0" counter(item) "/ ";
-        counter-increment: item;
-        width: 100px;
-    }
-    
-    & + ol > li {
-        &:last-child {
-            border-bottom: 1px solid rgba(47, 47, 47, 0.4); //colors.lightBlack
-        }
-
-        &:before {
-            width: 50px;
-        }
-
-    }
-`
-
-const ServiceTitle = styled.div`
-        flex-grow: 1;
-        line-height: 22px;
-        font-size: 0.9rem;
-        font-weight: 600;
+    margin-right: 150px;
 `
 
 const StyledAccordion = styled(Accordion)`

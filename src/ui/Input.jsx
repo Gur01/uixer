@@ -1,9 +1,10 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
+import {colors} from '@/constants';
 
-const Input = ({ errorMessage, ...rest }) => {
+const Input = ({ errorMessage, outline, className, ...rest }) => {
     return (
-        <Box>
-            <StyledInput type="text" {...rest} />
+        <Box className={className}>
+            <StyledInput type="text" outline={outline} {...rest} />
             {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
         </Box>
     )
@@ -12,8 +13,19 @@ const Input = ({ errorMessage, ...rest }) => {
 export default Input;
 
 const Box = styled.div`
-    margin-top: 50px;
     position: relative;
+`
+
+const outlinedStyles = css`
+    border: 1px solid ${({ error }) => error ? '#FF0000' : '#F2F2F2'};
+    height: 58px;
+    padding-left: 20px;
+
+    ::placeholder {
+        color: ${colors.lightBlack};
+        font-size: 0.7rem;
+        opacity: 0.6;
+    }
 `
 
 const StyledInput = styled.input`
@@ -25,7 +37,8 @@ const StyledInput = styled.input`
     font-size: 16px;
     font-family: inherit;
     color: ${({ error }) => error ? '#FF0000' : '#0F0F10'};
-
+    ${({outline})=> outline && outlinedStyles}
+    
     &:focus {
         outline-width: 0;
         opacity: 1;

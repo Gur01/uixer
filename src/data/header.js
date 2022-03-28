@@ -1,19 +1,19 @@
 const menu = [
     {
         text: 'Портфолио',
-        link: './'
+        link: '/'
     },
     {
         text: 'Прайс',
-        link: './'
+        link: '/'
     },
     {
         text: 'О нас',
-        link: './'
+        link: '/'
     },
     {
         text: 'Контакты',
-        link: './'
+        link: '/'
     },
 ]
 
