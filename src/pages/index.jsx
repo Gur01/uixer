@@ -1,19 +1,20 @@
 import { About, Advantages, Feedback, Footer, Header, CallToAction, Slider, Companies, Calculator, BannerSection } from '@/blocks';
 import { ContactForm, ContactFormSuccess } from '@/components';
 import { useModal } from '@/context';
-import { main, services, header, callToAction, slider } from '@/data';
+import { main, services, header, callToAction, slider, calculator } from '@/data';
 import { Modal } from '@/ui';
 
 export const getStaticProps = async () => {
     return {
-        props: { header, callToAction, slider }
+        props: { header, callToAction, slider, calculator }
     }
 }
 
 export default function Home({
     header,
     callToAction,
-    slider
+    slider,
+    calculator
     // advantages,
     // services,
     // feedback,
@@ -21,17 +22,14 @@ export default function Home({
     // banner
 }) {
     // const { isOpenedModal, wasSendForm } = useModal();
-    console.log(header);
     return (
         <>
             <Header data={header} />
             <CallToAction data={callToAction}/>
             <Slider data={slider}/>
             <Companies />
-            <Calculator />
-            <CallToAction data={callToAction}/>
-            <Slider data={slider}/>
-            <Companies />
+            <Calculator data={calculator}/>
+
             {/* <Advantages data={advantages} />
             <BannerSection data={banner} />
 =           <Services data={services} />

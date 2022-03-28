@@ -1,125 +1,15 @@
-import { colors } from '@/constants';
-import { Container, Section, Title, Divider, Dollar, AddButton, Accordion } from '@/ui';
-import { AccordionPanel} from '@/components';
+import { AccordionPanel } from '@/components';
+import { Accordion, Container, Divider, Dollar, Section, Title } from '@/ui';
 import styled from 'styled-components';
 
-const priceList = [
-    {
-        title: 'Одностраничный сайт',
-        cost: 35000,
-        items: [
-            {
-                title: "Брифинг",
-                description: "В целом, конечно, укрепление и развитие внутренней структуры выявляет срочную потребность первоочередных требований. Консультация с широким активом требует определения и.",
-                cost: 0
-            },
-            {
-                title: "Аналитика",
-                description: "",
-                cost: 5000
-            },
-            {
-                title: "Прототипирование",
-                description: "",
-                cost: 5000
-            },
-            {
-                title: "Дизайн — концепция",
-                description: "",
-                cost: 10000
-            },
-            {
-                title: "Адаптив",
-                description: "",
-                cost: 5000
-            },
-            {
-                title: "Разработка",
-                description: "",
-                cost: 10000
-            },
-        ]
-    },
-    {
-        title: 'Интернет-магазин',
-        cost: 35000,
-        items: [
-            {
-                title: "Брифинг",
-                description: "В целом, конечно, укрепление и развитие внутренней структуры выявляет срочную потребность первоочередных требований. Консультация с широким активом требует определения и.",
-                cost: 0
-            },
-            {
-                title: "Аналитика",
-                description: "",
-                cost: 5000
-            },
-            {
-                title: "Прототипирование",
-                description: "",
-                cost: 5000
-            },
-            {
-                title: "Дизайн — концепция",
-                description: "",
-                cost: 10000
-            },
-            {
-                title: "Адаптив",
-                description: "",
-                cost: 5000
-            },
-            {
-                title: "Разработка",
-                description: "",
-                cost: 10000
-            },
-        ]
-    },
-    {
-        title: 'Корпоративный сайт',
-        cost: 35000,
-        items: [
-            {
-                title: "Брифинг",
-                description: "В целом, конечно, укрепление и развитие внутренней структуры выявляет срочную потребность первоочередных требований. Консультация с широким активом требует определения и.",
-                cost: 0
-            },
-            {
-                title: "Аналитика",
-                description: "",
-                cost: 5000
-            },
-            {
-                title: "Прототипирование",
-                description: "",
-                cost: 5000
-            },
-            {
-                title: "Дизайн — концепция",
-                description: "",
-                cost: 10000
-            },
-            {
-                title: "Адаптив",
-                description: "",
-                cost: 5000
-            },
-            {
-                title: "Разработка",
-                description: "",
-                cost: 10000
-            },
-        ]
-    },
-]
-
 const Calculator = ({ data }) => {
+    const {title, price} = data;
+
     return (
         <Section>
             <Container>
                 <StyledDivider blocks={2}>
-                    <Title>Рассчитать стоимость:</Title>
+                    <Title>{title}</Title>
                     <DollarBox>
                         <Dollar />
                     </DollarBox>
@@ -127,23 +17,11 @@ const Calculator = ({ data }) => {
             </Container>
             <Container isWide>
                 <Accordion>
-                    {priceList.map((item, index) =>
+                    {price.map((item, index) =>
                         <AccordionPanel key={index} data={item}/>
                     )}
                 </Accordion>
             </Container>
-
-            {/* <AdvantagesBox>
-                    {advantages.map((item, index) =>
-                        <Advantage key={index}>
-                            <IconSpan>
-                                <Check />
-                            </IconSpan>
-
-                            <TextSpan>{item}</TextSpan>
-                        </Advantage>
-                    )}
-                </AdvantagesBox> */}
         </Section>
     )
 }
