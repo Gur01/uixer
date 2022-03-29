@@ -45,7 +45,7 @@ const GlobalStyle = createGlobalStyle`
             url('../../fonts/DMSans-Regular.woff2') format('woff2'),
             url('../../fonts/DMSans-Regular.woff') format('woff'),
             url('../../fonts/DMSans-Regular.ttf') format('truetype');
-        font-weight: normal;
+        font-weight: 400;
         font-style: normal;
         font-display: swap;
     }
@@ -113,6 +113,14 @@ const GlobalStyle = createGlobalStyle`
         background-color: #c5c5c5;
         border-radius: 10px;
         border: 3px solid #ffffff;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+        font-family: inherit; /* 1 */
     }
 
 `

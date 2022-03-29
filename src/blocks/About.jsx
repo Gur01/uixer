@@ -1,5 +1,5 @@
 import { colors } from '@/constants';
-import { Container, Section, Title, Divider, Button, Telegram, VK } from '@/ui';
+import { Container, Section, Title, Divider, Button, Telegram, VK, SmallTitle } from '@/ui';
 import styled from 'styled-components';
 
 const About = ({ data }) => {
@@ -44,14 +44,6 @@ export default About;
 
 const StyledTelegram = styled(Telegram)`
     margin-left: 16px;
-`
-
-const SmallTitle = styled.div`
-    line-height: 48px;
-    font-size: 1rem;
-    line-height: 26px;
-    margin-bottom: 16px;
-    color: ${colors.lightBlack};
 `
 
 const StyledSmallTitle = styled.div`

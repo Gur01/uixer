@@ -10,6 +10,8 @@ export { default as Input } from './Input';
 export { default as Layout } from './Layout';
 export { default as Modal } from './Modal';
 export { default as Section } from './Section';
+export { default as SmallTitle } from './SmallTitle';
 export { default as Textarea } from './Textarea';
 export { default as Title } from './Title';
+export { default as Select } from './Select';
 

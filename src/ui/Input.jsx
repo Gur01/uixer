@@ -20,28 +20,28 @@ const outlinedStyles = css`
     border: 1px solid ${({ error }) => error ? '#FF0000' : '#F2F2F2'};
     height: 58px;
     padding-left: 20px;
-
-    ::placeholder {
-        color: ${colors.lightBlack};
-        font-size: 0.7rem;
-        opacity: 0.6;
-    }
 `
 
 const StyledInput = styled.input`
     width: 100%;
     padding: 10px;
     border: 0;
-    border-bottom: 1px solid ${({ error }) => error ? '#FF0000' : '#0F0F10'};
+    border-bottom: 1px solid ${({ error }) => error ? '#FF0000' : '#E9E9E9'}; 
     opacity: 0.8;
-    font-size: 16px;
-    font-family: inherit;
+    font-size: 0.7rem;
     color: ${({ error }) => error ? '#FF0000' : '#0F0F10'};
     ${({outline})=> outline && outlinedStyles}
+
+    ::placeholder {
+        color: ${colors.lightBlack};
+        font-size: 0.7rem;
+        opacity: 0.6;
+    }
     
     &:focus {
         outline-width: 0;
         opacity: 1;
+        border-bottom: 1px solid ${({ error }) => error ? '#FF0000' : '#c9c9c9'}; 
     }
 `
 
