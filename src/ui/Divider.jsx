@@ -15,7 +15,7 @@ const StyledDivider = styled.div`
     display: flex;
 	justify-content: space-between;
     width: 100%;
-    align-items: flex-start;
+    /* align-items: flex-start; */
 
     > * {
         width: ${({blocks})=> blocks ? `calc(100% / ${blocks})` : 'auto' }

@@ -37,3 +37,8 @@ export const ArrowUp = () => <svg width="12" height="12" viewBox="0 0 12 12" fil
     <path d="M1 1H11V11" stroke="#FF5C00" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
 </svg>
 
+export const VK = () => <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.71341 9.98427C3.25517 9.98427 0.141928 6.24233 0.012207 0.0157471H2.74632C2.83612 4.5859 4.85173 6.52173 6.44829 6.92087V0.0157471H9.02285V3.95726C10.5995 3.78762 12.2557 1.99149 12.8145 0.0157471H15.389C14.9599 2.4505 13.1638 4.24663 11.8865 4.98504C13.1638 5.58375 15.2095 7.15038 15.9878 9.98427H13.1538C12.5451 8.08836 11.0285 6.62152 9.02285 6.42195V9.98427H8.71341Z" fill="#0077FF"/>
+</svg>
+
+

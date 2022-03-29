@@ -89,7 +89,7 @@ const AccordionPanel = ({ data }) => {
                         </TextBlock>
                         <FormBlock>
                             <StyledInput type="text" placeholder="Номер телефона" outline />
-                            <Button><ButtonText>Заказать сайт</ButtonText><Telegram /></Button>
+                            <Button>Заказать сайт</Button>
                         </FormBlock>
                     </ResultLeft>
                     <ResultSum>{formatPrice(total)}</ResultSum>
@@ -105,10 +105,6 @@ const TextBlock = styled.div`
     display: flex;
     flex-direction: column;
     width: 80%;
-`
-
-const ButtonText = styled.span`
-    margin-right: 16px;
 `
 
 const ResultLeft = styled.div`
