@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const CallToAction = ({ data }) => {
     const { advantages } = data;
-    console.log(advantages);
+
     return (
         <Section>
             <Container>

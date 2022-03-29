@@ -5,7 +5,6 @@ import { Logo } from '@/components';
 import Link from 'next/link'
 
 const Header = ({ data }) => {
-    console.log(data);
     const { phone, subPhone, menu } = data;
 
     return (

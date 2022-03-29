@@ -18,12 +18,6 @@ export default function Home({
     calculator,
     about
 }) {
-    // const { isOpenedModal, wasSendForm } = useModal();
-    console.log(header,
-        callToAction,
-        slider,
-        companies,
-        calculator  );
     return (
         <>
             <Header data={header} />

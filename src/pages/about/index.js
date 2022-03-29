@@ -4,20 +4,20 @@ import { useModal } from '@/context';
 import { about, services } from '@/data';
 import { Modal } from '@/ui';
 
-export const getStaticProps = async () => {
-    return {
-        props: {...about, services}
-    }
-}
+// export const getStaticProps = async () => {
+//     return {
+//         props: {...about, services}
+//     }
+// }
 
 const About = ({header, content, services, banner}) => {
     const { isOpenedModal, wasSendForm } = useModal();
 
     return (
         <>  
-            <PageHeader data={header}/>
+            {/* <PageHeader data={header}/>
             <PageContent data={content}/>
-            <BannerSection data={banner} />
+            <BannerSection data={banner} /> */}
             <Footer />
             <Modal open={isOpenedModal}>
                 {!wasSendForm && <ContactForm />}

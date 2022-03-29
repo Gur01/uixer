@@ -43,10 +43,8 @@ const data = {
 
 const AccordionPanel = ({ data }) => {
     const { items, title, cost } = data;
-    console.log(data);
     const [total, setTotal] = useState(0);
     const [isOpened, setIsOpened] = useState(false);
-    console.log(isOpened);
 
     const openPanel = () => {
         setIsOpened(true);

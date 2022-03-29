@@ -20,14 +20,12 @@ const Slider = ({ data }) => {
 
     const showIcon = (item) => {
         return () => {
-            console.log('show')
             item.style.display = 'flex';
         }
     }
 
     const hideIcon = (item) => {
         return () => {
-            console.log('hide')
             item.style.display = 'none';
         }
     }
@@ -62,7 +60,6 @@ const Slider = ({ data }) => {
     const openCase = () => {
         const image = caseRef.current;
         image.classList.add("bounceOut")
-        console.log('hello', image)
     }
 
     return (

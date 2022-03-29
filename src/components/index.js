@@ -1,6 +1,5 @@
 export { default as AccordionPanel } from './AccordionPanel';
 export { default as AdvantagesCard } from './AdvantagesCard';
-export { default as Banner } from './Banner';
 export { default as ContactForm } from './ContactForm';
 export { default as ContactFormSuccess } from './ContactFormSuccess';
 export { default as CustomSwiper } from './CustomSwiper';
