@@ -10,5 +10,4 @@ export { default as CallToAction } from './CallToAction';
 export { default as Slider } from './Slider';
 export { default as Companies } from './Companies';
 export { default as Calculator } from './Calculator';
-export { default as Orders } from './Orders';
 

@@ -3,13 +3,14 @@ import { Container, Section, Title, Divider } from '@/ui';
 import styled from 'styled-components';
 
 const Companies = ({ data }) => {
+    const {title, subTitle} = data;
     return (
         <Section>
             <Container>
             <Divider blocks={2}>
                 <div>
-                    <Title>Нам доверяют</Title>
-                    <SubTitle>Высокий уровень нашего проффесиональзма,привлекает крупные бренды к сотрудничеству с нами</SubTitle>
+                    <Title>{title}</Title>
+                    <SubTitle>{subTitle}</SubTitle>
                 </div>
             </Divider>
             </Container>
