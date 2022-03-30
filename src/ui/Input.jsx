@@ -27,9 +27,9 @@ const StyledInput = styled.input`
     padding: 10px;
     border: 0;
     border-bottom: 1px solid ${({ error }) => error ? '#FF0000' : '#E9E9E9'}; 
-    opacity: 0.8;
+    opacity: 1;
     font-size: 0.7rem;
-    color: ${({ error }) => error ? '#FF0000' : '#0F0F10'};
+    color: ${({ error }) => error ? '#FF0000' : colors.lightBlack};
     ${({outline})=> outline && outlinedStyles}
 
     ::placeholder {

@@ -1,3 +1,4 @@
+import { colors } from '@/constants';
 import styled from 'styled-components';
 import { ErrorMessage } from './Input';
 
@@ -21,15 +22,15 @@ const StyledTextarea = styled.textarea`
     padding: 10px;
     border: 0;
     border-bottom: 1px solid ${({ error }) => error ? '#FF0000' : '#E9E9E9'}; 
-    color: ${({ error }) => error ? '#FF0000' : '#0F0F10'};
-    opacity: 0.9;
+    color: ${({ error }) => error ? '#FF0000' : colors.lightBlack};
+    /* opacity: 0.9; */
     font-size: 0.7rem;
     min-height: 100px;
     resize: none;
 
     &:focus {
         outline-width: 0;
-        opacity: 1
+        /* opacity: 1 */
     }
 ;
 

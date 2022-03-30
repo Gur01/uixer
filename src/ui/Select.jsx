@@ -72,12 +72,6 @@ const Selected = styled.div`
         font-size: 0.7rem;
         color: ${colors.lightBlack}
     }
-    
-    &:focus {
-        outline-width: 0;
-        opacity: 1;
-        border-bottom: 1px solid ${({ error }) => error ? '#FF0000' : '#c9c9c9'}; 
-    }
 
 `
 
