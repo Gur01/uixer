@@ -6,8 +6,6 @@ import styled from 'styled-components';
 const items = ['Разработка', 'Консультация', 'Поговорить хочу'];
 
 const Contacts = ({ data }) => {
-    // const {title, price} = data;
-
     const onSelect = (value) => {
         console.log(value)
     }
@@ -86,6 +84,7 @@ const StyledForm = styled.form`
 
 const StyledSection = styled(Section)`
     padding-top: 150px;
+    padding-bottom: 140px;
     background-color: ${colors.white};
 `
 

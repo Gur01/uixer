@@ -1,4 +1,4 @@
-import { About, Advantages, Feedback, Footer, Header, CallToAction, Slider, Companies, Calculator, BannerSection, Contacts } from '@/blocks';
+import { About, Footer, Header, CallToAction, Slider, Companies, Calculator, Contacts } from '@/blocks';
 import { ContactForm, ContactFormSuccess } from '@/components';
 import { useModal } from '@/context';
 import { main, services, header, callToAction, slider, calculator } from '@/data';
@@ -27,6 +27,7 @@ export default function Home({
             <Calculator data={calculator}/>
             <About data={about} />
             <Contacts />
+            <Footer data={header}/>
 
             {/* <Advantages data={advantages} />
             <BannerSection data={banner} />

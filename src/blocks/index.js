@@ -1,5 +1,4 @@
 export { default as About } from './About';
-export { default as Advantages } from './Advantages';
 export { default as Calculator } from './Calculator';
 export { default as CallToAction } from './CallToAction';
 export { default as Companies } from './Companies';
