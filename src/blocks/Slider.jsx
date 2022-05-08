@@ -18,44 +18,62 @@ const Slider = ({ data }) => {
         setCurrentSlide(props.activeIndex)
     }
 
-    const showIcon = (item) => {
-        return () => {
-            item.style.display = 'flex';
-        }
-    }
+    // const showIcon = (item) => {
+    //     return () => {
+    //         item.style.display = 'flex';
+    //     }
+    // }
 
-    const hideIcon = (item) => {
-        return () => {
-            item.style.display = 'none';
-        }
-    }
+    // const hideIcon = (item) => {
+    //     return () => {
+    //         item.style.display = 'none';
+    //     }
+    // }
 
-    const definePosition = (event) => {
-        const container = sliderContainer.current;
-        const image = caseRef.current;
-        const {top, left} = container.getBoundingClientRect();
+    // const definePosition = (event) => {
+    //     const container = sliderContainer.current;
+    //     const image = caseRef.current;
+    //     const {top, left} = container.getBoundingClientRect();
         
-        image.style.left = `${event.pageX - left - 61}px`;
-        image.style.top = `${event.pageY - top - window.scrollY - 61}px`;
-    }
+    //     image.style.left = `${event.pageX - left - 61}px`;
+    //     image.style.top = `${event.pageY - top - window.scrollY - 61}px`;
+    // }
 
-    useEffect(() => {
-        const container = sliderContainer.current;
-        const image = caseRef.current;
-
-        const show = showIcon(image);
-        const hide = hideIcon(image);
-
-        container.addEventListener('mouseover', show)
-        container.addEventListener('mouseout', hide);
-        container.addEventListener('mousemove', definePosition);
+    // const defineScrollPosition = (event) => {
+    //     console.log(scrollY + 'px');
+    //     const container = sliderContainer.current;
+    //     const image = caseRef.current;
+    //     const {top} = container.getBoundingClientRect();
         
-        return () => {
-            container.removeEventListener('mouseover', show)
-            container.removeEventListener('mouseout', hide)
-            container.removeEventListener('mousemove', definePosition);
-        }
-    }, [])
+    //     image.style.top = `${event.pageY - top - window.scrollY - 61}px`;
+
+    //     // const container = sliderContainer.current;
+    //     // const image = caseRef.current;
+    //     // const {top, left} = container.getBoundingClientRect();
+        
+    //     // image.style.left = `${event.pageX - left - 61}px`;
+    //     // image.style.top = `${event.pageY - top - window.scrollY - 61}px`;
+    // }
+
+    // useEffect(() => {
+    //     const container = sliderContainer.current;
+    //     const image = caseRef.current;
+
+    //     const show = showIcon(image);
+    //     const hide = hideIcon(image);
+
+    //     container.addEventListener('mouseover', show)
+    //     container.addEventListener('mouseout', hide);
+    //     container.addEventListener('mousemove', definePosition);
+    //     window.addEventListener('scroll', defineScrollPosition);
+        
+    //     return () => {
+    //         container.removeEventListener('mouseover', show)
+    //         container.removeEventListener('mouseout', hide)
+    //         container.removeEventListener('mousemove', definePosition);
+    //         window.removeEventListener('scroll', defineScrollPosition);
+    //     }
+    // }, [])
 
     const openCase = () => {
         const image = caseRef.current;
@@ -81,15 +99,15 @@ const Slider = ({ data }) => {
                     >
                         {items.map((item, index) =>
                             <SwiperSlide key={index}>
-                                <img src={item.image} alt={item.altText} />
+                                <StyledSlide src={item.image} alt={item.altText} />
                             </SwiperSlide>
                         )}
 
                     </CustomSwiper>
-                    <StyledCase ref={caseRef} className="animated">
+                    {/* <StyledCase ref={caseRef} className="animated">
                             <span>Кейс</span>
                             <ArrowUp />
-                    </StyledCase>
+                    </StyledCase> */}
                 </SliderContainer>
                 <SwiperNavigation theme="white" className='slider' />
             </Container>
@@ -101,7 +119,7 @@ export default Slider;
 
 const SliderContainer = styled.div`
     position: relative;
-    cursor: none;
+    cursor: url('./images/case075.png') 32 32, auto;
 `
 
 const StyledCase = styled.div`
@@ -124,6 +142,10 @@ const StyledCase = styled.div`
 
     /* @media screen and (min-width: 1024px) {
     } */
+`
+
+const StyledSlide = styled.img`
+    width: 100%;
 `
 
 

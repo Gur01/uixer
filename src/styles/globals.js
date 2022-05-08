@@ -16,11 +16,11 @@ const GlobalStyle = createGlobalStyle`
 
     @font-face {
         font-family: 'Mont';
-        src: url('../../fonts/Mont-SemiBold.eot');
-        src: url('../../fonts/Mont-SemiBold.eot?#iefix') format('embedded-opentype'),
-            url('../../fonts/Mont-SemiBold.woff2') format('woff2'),
-            url('../../fonts/Mont-SemiBold.woff') format('woff'),
-            url('../../fonts/Mont-SemiBold.ttf') format('truetype');
+        src: url('../../fonts/Mont-Bold.eot');
+        src: url('../../fonts/Mont-Bold.eot?#iefix') format('embedded-opentype'),
+            url('../../fonts/Mont-Bold.woff2') format('woff2'),
+            url('../../fonts/Mont-Bold.woff') format('woff'),
+            url('../../fonts/Mont-Bold.ttf') format('truetype');
         font-weight: 700;
         font-style: normal;
         font-display: swap;
