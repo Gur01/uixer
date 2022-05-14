@@ -3,31 +3,29 @@ import { Container, Section, Title, Divider } from '@/ui';
 import styled from 'styled-components';
 
 const Companies = ({ data }) => {
-    const {title, subTitle} = data;
+    const { title, subTitle } = data;
     return (
         <Section>
             <Container>
-            <Divider blocks={2}>
-                <div>
+                <TitleBlock blocks={2}>
                     <Title>{title}</Title>
                     <SubTitle>{subTitle}</SubTitle>
-                </div>
-            </Divider>
+                </TitleBlock>
             </Container>
             <Container isWide>
                 <Row>
                     <Cell><img src="./images/rgd.svg" alt="" /></Cell>
                     <Cell><img src="./images/betwinner.svg" alt="" /></Cell>
                     <Cell><img src="./images/armada.svg" alt="" /></Cell>
-                </Row> 
+                </Row>
                 <Row>
                     <Cell><img src="./images/cgc.svg" alt="" /></Cell>
                     <Cell><img src="./images/cska.svg" alt="" /></Cell>
                     <Cell><img src="./images/standard.svg" alt="" /></Cell>
                     <Cell><img src="./images/cat.svg" alt="" /></Cell>
-                </Row> 
+                </Row>
             </Container>
-                {/* <AdvantagesBox>
+            {/* <AdvantagesBox>
                     {advantages.map((item, index) =>
                         <Advantage key={index}>
                             <IconSpan>
@@ -46,10 +44,24 @@ export default Companies;
 
 const Row = styled.div`
     display: flex;
+    flex-direction: column;
 
+    div {
+        margin-bottom: 10px;
+    }
+    
     &:first-child {
-        margin-bottom: 16px;
+        margin-bottom: 0;
         margin-top: 64px;
+    }
+    
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+
+        &:first-child {
+            margin-bottom: 16px;
+            margin-top: 64px;
+        }
     }
 `
 const Cell = styled.div`
@@ -62,7 +74,13 @@ const Cell = styled.div`
     box-shadow: 0px 60px 116px rgba(26, 24, 23, 0.05), 0px 25.0666px 48.462px rgba(26, 24, 23, 0.0359427), 0px 13.4018px 25.9101px rgba(26, 24, 23, 0.0298054), 0px 7.51293px 14.525px rgba(26, 24, 23, 0.025), 0px 3.99006px 7.71412px rgba(26, 24, 23, 0.0201946), 0px 1.66035px 3.21002px rgba(26, 24, 23, 0.0140573);
 
     & + div {
-        margin-left: 16px;
+        margin-left: 0;
+    }
+    
+    @media screen and (min-width: 1024px) {
+        & + div {
+            margin-left: 16px;
+        }
     }
 `
 
@@ -76,6 +94,20 @@ const SubTitle = styled.div`
         /* @media screen and (min-width: 1024px) {
         margin-bottom: 0;
     } */
+`
+
+const TitleBlock = styled.div`
+    width: 70%;
+
+    @media screen and (min-width: 540px) {
+        width: 80%;
+    }
+    @media screen and (min-width: 768px) {
+        width: 60%;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 50%;
+    }
 `
 
 

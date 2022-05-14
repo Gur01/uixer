@@ -33,15 +33,15 @@ const StyledDivider = styled(Divider)`
 `
 
 const DollarBox = styled(Divider)`
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        width: auto;
-        /* align-content: flex-end; */
-
-        /* @media screen and (min-width: 1024px) {
-        margin-bottom: 0;
-    } */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 39px;
+    /* align-content: flex-end; */
+    
+    @media screen and (min-width: 1024px) {
+        width: 55px;
+    }
 `
 
 

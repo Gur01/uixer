@@ -45,12 +45,21 @@ const StyledAccordionItem = styled.li`
     border-top: 1px solid rgba(47, 47, 47, 0.4); //colors.lightBlack
     justify-content: space-between;
 	align-items: center;
+    position: relative;
 
     &:before {
         display: inline-block;
         content: "0" counter(item) "/ ";
         counter-increment: item;
         width: 100px;
+        position: absolute;
+        top: 38px;
+        font-size: 0.7rem;
+        
+        @media screen and (min-width: 1024px) {
+            position: static;
+            font-size: 0.9rem;
+        }
     }
     
     & + ol > li {
@@ -60,8 +69,26 @@ const StyledAccordionItem = styled.li`
 
         &:before {
             width: 50px;
+            display: none;
+            
+            @media screen and (min-width: 1024px) {
+                display: inline-block;
+            }
         }
+    }
 
+    div {
+        margin-top: 69px;
+        
+        @media screen and (min-width: 1024px) {
+            margin-top: 0;
+        }
+    }
+
+    & + ol > li {
+        div {
+            margin-top: 0;
+        }
     }
 `
 
